@@ -12,18 +12,24 @@ body {
     width: 80vw;
     height: 90vh;
     margin-top: 3vh;
+
+    display: flex;
+    justify-content: center;
 }
 
 .wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
     grid-gap: 0px;
     grid-auto-rows: 10px;
 }
 
+#grid {
+    height: 85%;
+}
+
 #palette {
-    display: flex;
-    flex-flow: row wrap;
+    height: 15%;
 }
 
 button {
