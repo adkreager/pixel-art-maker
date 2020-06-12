@@ -4,6 +4,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    margin: 0 auto;
 }
 
 #app-space {
@@ -14,14 +16,27 @@ body {
     margin-top: 3vh;
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
 }
 
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
-    grid-gap: 0px;
-    grid-auto-rows: 10px;
+#grid {
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+#grid-table {
+    width: 70vh;
+    border: 1px solid #CCCCCC;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid #CCCCCC;
+    width: 3vw;
+    height: 2vw;
 }
 
 #grid {
@@ -29,14 +44,14 @@ body {
 }
 
 #palette {
-    height: 15%;
+    height: 15%; 
 }
 
 button {
     border-radius: 50%;
     border: 0;
-    background-color: red;
     padding: 2vh;
-    height: 3vw;
-    width: 3vw;
+    margin: .3vh;
+    height: 3%;
+    width: 3%;
 }
