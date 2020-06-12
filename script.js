@@ -13,4 +13,4 @@ document.addEventListener('DOMContentLoaded', function () {
         newButton.style.backgroundColor = colorOptions[i];
         document.querySelector('#palette').appendChild(newButton);
     }
-}
+});
