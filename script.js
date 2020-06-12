@@ -1,16 +1,31 @@
 let selectedColor = 'White';
 
 let colorOptions = ['DarkRed', 'Red', 'Salmon', 'DarkOrange', 'Orange', 'LightSalmon',
- 'Khaki', 'Yellow', 'LightGoldrenrodYellow', 'LimeGreen', 'MediumSpringGreen', 'PaleGreen',
+ 'Khaki', 'Yellow', 'LimeGreen', 'MediumSpringGreen', 'PaleGreen',
   'DarkBlue', 'Blue', 'CornFlowerBlue', 'Indigo', 'BlueViolet', 'MediumPurple', 'DarkViolet',
    'DarkMagenta', 'MediumOrchid', 'Black', 'DimGray', 'Gray', 'Silver', 'LightGray', 'White',
     '#39322F', '#554B46', '#71635C', '#7F7068', '#8D7C74'];
 
 document.addEventListener('DOMContentLoaded', function () {
+    // creates color buttons based on colors in colorOptions array
     for (let i = 0; i < colorOptions.length; i++) {
         let newButton = document.createElement('button');
         newButton.class="color-option";
         newButton.style.backgroundColor = colorOptions[i];
         document.querySelector('#palette').appendChild(newButton);
+    }
+
+    let table = document.getElementById('grid-table');
+    for (let i = 0; i < 18; i++) {
+        let newRow = document.createElement('tr');
+        newRow.className = 'row';
+        document.body.appendChild(newRow);
+        for (let j = 0; j < 30; j++) {
+            let insertRow = document.getElementsByClassName('row')[i];
+            let newNode = document.createElement('td');
+            newNode.className = 'pixel';
+            insertRow.appendChild(newNode);
+        }
+        table.appendChild(newRow);
     }
 });
