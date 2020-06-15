@@ -24,8 +24,14 @@ document.addEventListener('DOMContentLoaded', function () {
         for (let j = 0; j < 30; j++) {
             let newPixel = document.createElement('div');
             newPixel.className = 'pixel';
+            newPixel.id = 'pixel' + i + "-" + j;
+            newPixel.onclick(function())
             newRow.appendChild(newPixel);
         }
         grid.appendChild(newRow);
     }
 });
+
+document.addEventListener('click', function () {
+    let clickedPixel = 
+})
