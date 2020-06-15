@@ -15,17 +15,17 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('#palette').appendChild(newButton);
     }
 
-    let table = document.getElementById('grid-table');
-    for (let i = 0; i < 18; i++) {
-        let newRow = document.createElement('tr');
+    let grid = document.getElementById('grid');
+    for (let i = 0; i < 30; i++) {
+        // let newPixel = document.createElement('div');
+        // newPixel.className = 'pixel';
+        let newRow = document.createElement('div');
         newRow.className = 'row';
-        document.body.appendChild(newRow);
         for (let j = 0; j < 30; j++) {
-            let insertRow = document.getElementsByClassName('row')[i];
-            let newNode = document.createElement('td');
-            newNode.className = 'pixel';
-            insertRow.appendChild(newNode);
+            let newPixel = document.createElement('div');
+            newPixel.className = 'pixel';
+            newRow.appendChild(newPixel);
         }
-        table.appendChild(newRow);
+        grid.appendChild(newRow);
     }
 });
